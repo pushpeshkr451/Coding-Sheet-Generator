@@ -1,0 +1,21 @@
+/* Sets the default font for the entire page */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Styles for the loading spinner */
+.loader {
+  border-top-color: #3498db; /* Sets the color of the spinning part of the loader */
+  -webkit-animation: spin 1s linear infinite; /* For Safari and Chrome */
+  animation: spin 1s linear infinite; /* Standard animation property */
+}
+
+/* Defines the rotation animation for the loader */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
