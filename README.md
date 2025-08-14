@@ -27,22 +27,6 @@ A web-based tool that uses the Gemini API to generate curated coding practice sh
 
 ---
 
-## 📸 Screenshots
-
-**1. Generating sheets for "Dynamic Programming"**
-
-![Generating sheets for "Dynamic Programming"](https://googleusercontent.com/file_content/3)
-
-**2. LeetCode results appear first**
-
-![LeetCode results appear first](https://googleusercontent.com/file_content/4)
-
-**3. Codeforces results are also generated**
-
-![Codeforces results are also generated](https://googleusercontent.com/file_content/5)
-
----
-
 ## 🛠️ Technologies Used
 
 -   **Frontend**: HTML, CSS, JavaScript
