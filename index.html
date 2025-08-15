@@ -14,8 +14,8 @@
   <body
     class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4"
   >
-    <div class="w-full max-w-4xl mx-auto">
-      <!-- API Key Input Section -->
+    <div class="w-full max-w-5xl mx-auto">
+      <!-- API Key Section -->
       <div
         id="apiKeySection"
         class="bg-gray-800 p-8 rounded-lg shadow-lg text-center"
@@ -44,18 +44,54 @@
         </p>
       </div>
 
-      <!-- Sheet Generator Section -->
+      <!-- Generator Section -->
       <div id="generatorSection" class="hidden">
         <div class="text-center mb-8">
           <h1 class="text-3xl font-bold mb-2 text-cyan-400">
             Generate Your Practice Sheets
           </h1>
           <p class="text-gray-400">
-            Enter a topic (e.g., Dynamic Programming, Graphs, Trees) to generate
-            four curated problem sheets.
+            Enter your handles to track solved problems, then enter a topic to
+            generate sheets.
           </p>
         </div>
 
+        <!-- User Handle Inputs -->
+        <div class="bg-gray-800 p-6 rounded-lg mb-8">
+          <h2 class="text-xl font-semibold mb-4 text-center">
+            Track Your Progress
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+            <input
+              type="text"
+              id="leetcodeHandle"
+              class="p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              placeholder="LeetCode Handle"
+            />
+            <input
+              type="text"
+              id="codeforcesHandle"
+              class="p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              placeholder="Codeforces Handle"
+            />
+            <button
+              id="loadSolved"
+              class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center"
+            >
+              <span id="loadButtonText">Load Solved</span>
+              <div
+                id="loadLoader"
+                class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 ml-3 hidden"
+              ></div>
+            </button>
+          </div>
+          <p
+            id="solvedStatus"
+            class="text-center mt-4 text-sm text-gray-400 h-5"
+          ></p>
+        </div>
+
+        <!-- Topic Input and Generate Button -->
         <div class="flex flex-col sm:flex-row gap-4 mb-8">
           <input
             type="text"
@@ -76,7 +112,7 @@
         </div>
 
         <div id="sheetsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Sheet cards will be inserted here by JavaScript -->
+          <!-- Sheet cards will be inserted here -->
         </div>
         <div class="text-center mt-8">
           <button

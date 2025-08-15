@@ -1,16 +1,13 @@
-/* Sets the default font for the entire page */
 body {
   font-family: "Inter", sans-serif;
 }
 
-/* Styles for the loading spinner */
 .loader {
-  border-top-color: #3498db; /* Sets the color of the spinning part of the loader */
-  -webkit-animation: spin 1s linear infinite; /* For Safari and Chrome */
-  animation: spin 1s linear infinite; /* Standard animation property */
+  border-top-color: #3498db;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
-/* Defines the rotation animation for the loader */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -18,4 +15,14 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Custom style for solved problems */
+.solved-problem a {
+  color: #4ade80; /* A nice green color */
+  text-decoration: line-through;
+}
+
+.solved-problem a:hover {
+  color: #86efac;
 }
